@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/footer";
 import SectionHeading from "@/components/section-heading";
 import { HOMELIST, TESTIMONIALS } from "@/lib/constants";
 import Image from "next/image";
@@ -13,7 +14,7 @@ export default function Home() {
         height={200}
       />
 
-      <div className="container grid place-items-center gap-[97px] md:gap-[157px]">
+      <section className="container grid place-items-center gap-[97px] md:gap-[157px]">
         <SectionHeading>
           <h1 className="h1 | mx-auto sm:leading-[56px] md:max-w-[10ch] xl:max-w-[170ch] xl:leading-[100px]">
             Find the best <span className="text-primary-coral">talent</span>
@@ -36,7 +37,7 @@ export default function Home() {
           height={100}
           priority={true}
         />
-      </div>
+      </section>
 
       <section className="relative overflow-hidden bg-secondary-green-700">
         <Image
@@ -86,7 +87,7 @@ export default function Home() {
           height="100"
           priority={false}
         />
-        <div className="container grid gap-12 mb-[8rem]">
+        <div className="container mb-[8rem] grid gap-12">
           <h3 className="h3 mx-auto mb-12 mt-10 text-center lg:max-w-[30ch] lg:leading-[48px] xl:max-w-[32ch]">
             Delivering real results for top companies. Some of our
             <span className="text-secondary-green-400"> success stories.</span>
@@ -133,7 +134,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-        className="absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0"
           src="/assets/bg-pattern-home-5.svg"
           alt="presentation"
           width="147"
@@ -142,11 +143,9 @@ export default function Home() {
         />
       </section>
 
+      <Footer cta={true}/>
       {/* TODO: CTA and Footer components */}
       {/* 
-
-
-  Ready to get started?
 
   contact us
 
