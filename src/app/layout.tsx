@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Livvic } from "next/font/google";
 import "./globals.css";
+import { MenuProvider } from "@/lib/context/menu-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const livvic = Livvic({
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -23,12 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <MenuProvider>
+      <html lang="en">
+        <body
+          className={`${livvic.className} body-font bg-primary-green text-white`}
+        >
+          {children}
+        </body>
+      </html>
+    </MenuProvider>
   );
 }
