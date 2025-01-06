@@ -147,19 +147,9 @@ export default function Home() {
       {/* TODO: CTA and Footer components */}
       {/* 
 
-  contact us
 
 
-
-  home
-  about
-
-  987  Hillcrest Lane
-  Irvine, CA
-  California 92714
-  Call Us : 949-833-7432
-
-  Copyright 2020. All Rights Reserved</> */}
+  </> */}
     </>
   );
 }
